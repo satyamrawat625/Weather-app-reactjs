@@ -1,0 +1,10 @@
+.container {
+  max-width: 65%;
+  margin: 20px auto;
+}
+
+@media (max-width:900px) {
+  .container {
+    max-width: 90%;
+  }
+}

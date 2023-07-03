@@ -1,0 +1,107 @@
+
+.weather {
+    border-radius: 6px;
+    box-shadow: 10px -2px 20px 2px rgb(0 0 0 / 30%);
+    color: #fff;
+    background-color: #221aab3d;
+    margin: 20px auto 0 auto;
+    padding: 0 20px 20px 20px;
+
+    margin-bottom: 100px;
+  }
+  
+  .top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 28%;
+  }
+  
+  .bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 19%;
+    
+  }
+  .city {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 1;
+    margin: 0;
+    letter-spacing: 1px;
+  }
+  
+  .weather-description {
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 1;
+    margin: 0;
+  }
+  
+  .weather-icon {
+    width: 180px;
+  }
+  
+  .temperature {
+    text-align: center;
+    font-weight: 600;
+    font-size: 100px;
+    letter-spacing: -5px;
+    margin: 10px 0;
+  }
+  
+  .details {
+    padding-left: 20px;
+    width: 25%;
+  }
+  
+  .parameter-row {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .parameter-label {
+    text-align: left;
+    font-weight: 400;
+    font-size: 20px;
+    flex-basis: 50%; /* Set the label column to occupy 50% width */
+  }
+  
+  .parameter-value {
+    text-align: right;
+    font-weight: 600;
+    font-size: 19px;
+    flex-basis: 50%; /* Set the value column to occupy 50% width */
+  }
+  
+  .parameter-label.top {
+    border-bottom: 1px solid #fff;
+  }
+  
+  @media (max-width:1000px) {
+    .details{
+      width: 40%;
+    }
+  }
+
+  @media (max-width:600px) {
+    .weather{
+      padding-top: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+    .bottom,.top{
+      display: flex;
+      flex-direction: column;
+    }
+    .details{
+      margin-top: 10px;
+      width: 90%;
+    }
+    
+  }
+
+.center{
+  text-align: center;
+}

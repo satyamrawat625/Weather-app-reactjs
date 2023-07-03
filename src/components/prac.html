@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const url = 'https://wft-geo-db.p.rapidapi.com/v1/geo/cities?namePrefix=delhi';
+        const options = {
+            method: 'GET',
+            headers: {
+                'X-RapidAPI-Key': '6253b85fd8msh242e55a821bd8b1p11ab9cjsn3c9aa24bbab6',
+                'X-RapidAPI-Host': 'wft-geo-db.p.rapidapi.com'
+            }
+        };
+
+        fetch(url, options)
+            .then(response => response.text())
+            .then(result => {
+                console.log(result);
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
+</body>
+
+</html>
