@@ -6,11 +6,11 @@ import { WEATHER_API_URL, WEATHER_API_KEY } from "./api";
 import "./App.css";
 
 function App() {
-  const [currentWeather, setCurrentWeather] = useState(null);
-  const [forecast, setForecast] = useState(null);
+  const [currentWeather, setCurrentWeather] = useState(null);//state for current weather
+  const [forecast, setForecast] = useState(null);//state for forecast
 
-  const handleOnSearchChange = (searchData) => {
-    const [lat, lon] = searchData.value.split(" ");
+  const handleOnSearchChange = (searchData) => {//on searching
+    const [lat, lon] = searchData.value.split(" ");//extracting latitude and longitude
 
     const currentWeatherFetch = fetch(
       `${WEATHER_API_URL}/weather?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=metric`
@@ -35,8 +35,10 @@ function App() {
 
   return (
     <div className="container">
+    {/* search component for entering city name and converting it into lat & longitudes */}
       <Search onSearchChange={handleOnSearchChange} />
       {currentWeather && <CurrentWeather data={currentWeather} />}
+      {/* passing forecast as props to forecast rendering component */}
       {forecast && <Forecast data={forecast} />}
     </div>
   );
